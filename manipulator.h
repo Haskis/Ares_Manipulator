@@ -4,6 +4,7 @@
 #include <QObject>
 #include "motordriver.h"
 #include "modbusserver.h"
+#include "gpsserver.h"
 
 class Manipulator : public QObject
 {
@@ -16,10 +17,11 @@ signals:
 public slots:
 private slots:
     void handleIncomingData(int index, quint16 data);
+    void handleGps();
 private:
     MotorDriver *motorDriver;
     ModbusServer *modbusServer;
-
+    GpsServer *ultraZajebistySerwerGpsByRadek;
 };
 
 #endif // MANIPULATOR_H

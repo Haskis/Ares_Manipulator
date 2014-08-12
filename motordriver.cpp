@@ -34,7 +34,7 @@ void MotorDriver::setMotor(int index, bool forward, char speed)
 {
   safetyTimer->stop();
   safetyTimer->start();
-  if(index<0 || index>8){
+  if(index<0 || index>7){
     return;
   }
   if(speed<0 || speed > 100){
